@@ -67,17 +67,6 @@ endif
 " }}}
 " Colors {{{
 
-if exists("g:disable_truecolor") && g:disable_truecolor
-    set t_Co=256
-    let g:hybrid_custom_term_colors = 1
-else
-    " Magic incantations to get the correct terminal escapes, regardless of
-    " terminal. Needs vim 7.4.1799+.
-    set t_8f=[38;2;%lu;%lu;%lum
-    set t_8b=[48;2;%lu;%lu;%lum
-    set termguicolors
-endif
-
 set background=dark
 colorscheme hybrid
 let g:airline_powerline_fonts = 1
@@ -233,7 +222,7 @@ let g:ctrlp_mruf_relative = 1
 
 " PyMatcher for CtrlP. This speeds up matching considerably.
 if !has('python') && !has('python3')
-    echo 'In order to use pymatcher plugin, you need +python compiled vim'
+    "echo 'In order to use pymatcher plugin, you need +python compiled vim'
 else
     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
