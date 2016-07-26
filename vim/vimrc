@@ -91,6 +91,7 @@ set autoindent                " Automatically indent
 
 " Better tags handling
 set tags=./tags;/
+map t <C-]>
 
 " }}}
 " Spaces & Tabs {{{
